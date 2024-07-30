@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # โหลดโมเดลและตัวแปลงฟีเจอร์
-model = joblib.load('text_classification_model.pkl')
+model = joblib.load('new_model.pkl')
 vectorizer = joblib.load('vectorizer.pkl')
 
 # ข้อความที่ต้องการทำนาย

@@ -7,15 +7,15 @@ import joblib
 from imblearn.over_sampling import RandomOverSampler  # ใช้ RandomOverSampler แทน SMOTE
 
 # โหลดข้อมูล
-df = pd.read_csv('data/data.csv')
+df = pd.read_csv('data/new_data.csv')
 
 # ตรวจสอบการกระจายของข้อมูล
 print("Class distribution before resampling:")
-print(df['label'].value_counts())
+print(df['who'].value_counts())
 
 # เตรียมข้อมูล
 X = df['text']
-y = df['label']
+y = df['who']
 
 # แปลงข้อความเป็นฟีเจอร์
 vectorizer = TfidfVectorizer()
@@ -41,5 +41,5 @@ print("Classification Report:")
 print(classification_report(y_test, y_pred))
 
 # บันทึกโมเดลและการแปลงฟีเจอร์
-joblib.dump(model, 'text_classification_model.pkl')
+joblib.dump(model, 'new_model.pkl')
 joblib.dump(vectorizer, 'vectorizer.pkl')

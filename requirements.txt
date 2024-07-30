@@ -7,4 +7,5 @@ transformers
 matplotlib
 seaborn
 imbalanced-learn
+torch
 
