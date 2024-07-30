@@ -1,0 +1,8 @@
+pandas
+pythainlp
+scikit-learn
+gensim
+tensorflow
+transformers
+matplotlib
+seaborn
